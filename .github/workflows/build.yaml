@@ -48,5 +48,6 @@ jobs:
           -Danypoint.password=Chakri@2722
           -Danypoint.env=$ANYPOINT_ENV \
           -Dapp.name=$APP_NAME \
+          -DskipDeploymentVerification=false
           -DworkerType=$WORKER_SIZE \
           -Dregion=$REGION
