@@ -17,7 +17,7 @@ jobs:
       ANYPOINT_ENV: Sandbox
       APP_NAME: my-mule-app
       WORKER_SIZE: 0.1
-      REGION: us-east-1
+      REGION: us-east-2
 
     steps:
       - name: Checkout Repository
@@ -44,8 +44,8 @@ jobs:
         run: |
           mvn deploy \
           -DmuleDeploy \
-          -Danypoint.username=chakri-personal \
-          -Danypoint.password=Chakri@2722 \
+          -Danypoint.username=$ANYPOINT_USERNAME \
+          -Danypoint.password=$ANYPOINT_PASSWORD \
           -Danypoint.env=$ANYPOINT_ENV \
           -Dapp.name=$APP_NAME \
           -DskipDeploymentVerification=false
